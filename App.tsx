@@ -65,7 +65,6 @@ class App extends React.Component<AppProp,AppState> {
     }
 
   render(){
-     console.log("state", this.state)
      switch (this.state.screen){
          case Screen.SPLASH: {
          return (<SafeAreaView>
@@ -75,7 +74,6 @@ class App extends React.Component<AppProp,AppState> {
          case Screen.LIST:{
              return (<SafeAreaView>
                 <SongList clickCallback={(song:SongDetail)=>{
-                    console.log("clicled 2")
                     this.setState({screen:Screen.DETAIL,songDetail:song})
                 }}/>
              </SafeAreaView>)
